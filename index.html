@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&
+    display=swap" rel="stylesheet">
+        <!--Google fonts fim-->
+
+     
+        <!-- Bootstrap icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        
+        <script src="menu.js" defer></script>
+
+
+    <title>Portifolio Marcelo Faquim</title>
+</head>
+<body>
+    
+    <header>
+
+        <style>
+
+              /* estilo geral*/  
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button{
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: aqua;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover,  form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px aqua;
+    transform: scale(1.05);
+}
+
+h2.titulo{
+    color: white;
+    font: 38px;
+    text-align: center;
+}
+
+h2.titulo span{
+    color: aqua;
+}
+
+
+/*estilo cabeçalho*/
+
+header{
+    padding: 40px 4%;
+}
+
+header  .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header a {
+    color: #7d7d7d;
+    text-decoration: none; /* retirando o sublinhado das letras*/
+    display: inline-block;
+    transition: .5s;
+}
+
+header nav.menu-desktop a:hover{
+    color: white;
+    transform: scale(1.05);
+}
+
+header nav ul{
+     list-style-type: none; /*retirar as bolinhos de topicos */
+}
+
+/* deixando um do lado do outro */ 
+
+header nav.menu-desktop ul li{ 
+    display: inline-block;
+    padding: 0 40px;
+}
+
+/* Estilo de menu mobile */
+
+.btn-abrir-menu i{
+    color:aqua;
+    font-size: 35px;
+}
+
+.menu-mobile{
+        background: black;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99999;
+        width: 0%;
+        overflow: hidden;
+        transition: .2s;
+    }
+
+    .menu-mobile.abrir-menu{
+        width: 70%;
+    }
+
+    .menu-mobile.abrir-menu ~ .overlay-menu{
+        display: block;
+    }
+
+    .menu-mobile .btn-fechar{
+        padding: 20px 4%;
+        cursor: pointer;
+    }
+
+    .menu-mobile .btn-fechar i{
+        color: white;
+        font-size: 25px;
+    
+    }
+
+    .menu-mobile nav ul{
+        text-align: right;
+    }
+
+    .menu-mobile nav ul li a{
+        color: white;
+        font-size: 20px;
+        font-weight: 300;
+        padding: 20px 8%;
+        display: block;
+    }
+
+    .menu-mobile nav ul li a:hover{
+        background-color: white;
+        color: black;
+    }
+
+    .overlay-menu{
+        background-color: #000000a7;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 88888;
+        display: none;
+    }
+
+/* Topo do site */
+
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+/* fazendo com que a imagem e o texto fiquem centralizados */
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1{
+    color: white;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color: aqua;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: white;
+    margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+/* efeito na imagem */
+
+@keyframes flutuar{
+    0%{
+        top:0;
+    }
+    100%{
+        top:30px
+    }
+}
+
+/* fim do efeito da imagem */
+
+/* Conteudo */
+
+section.especialidades{
+    padding: 40px 4%;
+    
+}
+
+section.especialidades .flex{
+    gap: 60px;
+}
+
+ .especialidades .especialidades-box{ /*caixa aonde fica minhas especialidades */
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 25px;
+    transition: .2s;
+    
+}
+
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #ffffff78;
+}
+
+.especialidades .especialidades-box i{ /*icones */
+    font-size: 40px;
+    color: aqua;
+}
+
+.especialidades .especialidades-box h3{
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* Apresentação pessoal */
+
+section.sobre{
+    padding: 40px 4%;
+    padding-top: 50px;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: white;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 30px;
+    margin-bottom: 27px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: aqua;
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    margin: 12px 0;
+    text-align: justify;
+}
+
+.btn-redes button{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    background-color: aqua;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+/* Estilo do Portifólio */
+
+section.portifolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+section.portifolio .flex{
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-portifolio{
+    width: 360px;
+    height: 460px;
+    background-size: cover; /* a imagem se ajusta */
+    background-position: 100% 0%; /* posicionamento vertical e horizontal = 0, começa no topo */
+    transition: 8s; /*efeito de rolagem */
+    cursor: pointer;
+    border-radius: 40px;
+    background-color: aqua; /*retirar quando colocar a imagem do projeto*/
+    position: relative;
+}
+
+.img-portifolio:hover{ /* segundo passo para o efeito de rolagem*/
+    background-position: 100% 100%;
+
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 300;
+    background-color: #000000b8;
+    color: white;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+    
+}
+
+/* Estilo formulario */
+
+section.formulario{
+    padding: 80px 4%;
+  
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* deixar o objeto em coluna */
+    gap: 10px;
+    margin-top: 30px;
+}
+
+form input, form textarea{
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+}
+
+form textarea{
+    resize: none;
+    max-height: 200px;
+    
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: aqua;
+    color: black;
+    cursor: pointer;
+    font-weight: 400;
+    transition: .3s;
+    
+}
+
+/* Estilo do rodapé */
+
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+footer .flex{
+    justify-content: space-between;
+}
+
+.line-footer{
+    padding: 20px 0;
+      
+}
+
+.borda{
+    border-top: 2px solid aqua;
+}
+
+footer .line-footer p i{
+    color: aqua;
+    font-size: 19px;
+}
+
+footer .line-footer p a{
+     color: white;
+}
+
+@media screen and (max-width: 1020px) {
+
+    /* Classes gerais */
+
+    .flex{
+        flex-direction: column;;
+    }
+
+    h2.titulo{
+    font-size: 30px;
+    line-height: 40px;
+}
+
+    /* cabeçalho  */
+    .menu-desktop, .btn-contato{
+        display: none;
+    }
+
+    
+
+    /* Topo do Site */
+
+    section.topo-do-site .flex{
+    gap: 40px;
+}
+
+    section.topo-do-site{
+    padding: 20px 8%;
+}
+
+    .topo-do-site h1{
+    font-size: 30px;
+}        
+    .topo-do-site .img-topo-site img{
+        width: 100%;
+
+}
+
+    /* Especialidades */
+
+    section.especialidades{
+    padding: 40px 8%;
+    
+}
+
+    /* SObre */
+
+    section.sobre {
+        padding: 80px 8%;
+}
+
+    .sobre .txt-sobre h2{
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .btn-redes{
+        text-align: center;
+    }
+
+    .img-sobre img{
+        width: 100%;
+    }
+
+    /* Portifolio */
+
+    section portifolio{
+        padding: 80px 8%;
+    }
+
+    .img-portifolio{
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+       
+    }
+
+    section.portifolio .flex{
+        gap: 60px
+    }
+
+    /* Rodapé */
+
+    .footer .flez{
+        flex-direction: column;
+    }
+
+    footer .line-footer{
+        text-align: center;
+    }
+
+}
+
+        </style>
+
+
+
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <img src="imagens/Logo marca Marcelo.png" alt=""> <!--colocar a logo, com o caminho da pasta de imagem-->
+                </a>
+            </div> <!--logo-->
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Especialidade</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Projetos</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-contato">
+                <a href="#">
+                    <button>Contato</button>
+                </a>
+            </div>
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Especialidade</a></li>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#">Projetos</a></li>
+                        <li><a href="#">Contato</li>
+                    </ul>
+                </nav>
+
+             </div>  <!--fim do menu mobile-->
+
+             <div class="overlay-menu" id="overlay-menu">
+
+             </div>
+
+        </div> <!-- interface -->
+    </header>
+
+    <main>
+
+        <section class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL <span>.</span></h1>
+                        <p>Desenvolvimento Front-End com habilidades profissionais para que o seu produto
+                            possa ser o destaque do mercado.
+                        </p>
+
+                            <div class="btn-contato">
+                                <a href="#">
+                                    <button>Entre em contato</button>
+                                </a>
+                            </div>
+
+                    </div><!--txt topo site-->
+                    <div class="img-topo-site">
+
+                        <img src="imagens/Logo Tipo Marcelo Faquim (1).png" alt=""> <!--minha foto profissional-->
+
+                    </div><!--img topo site-->
+                </div><!--flex-->
+
+            </div> <!--final da interface-->
+
+        </section> <!--final topo do site-->
+
+        <section class="especialidades">
+            <div class="interface">
+                    <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
+                <div class="flex">
+
+                    <div class="especialidades-box">
+                        <i class="bi bi-code-square"></i>
+                            <h3>WebSite</h3>
+                            <p>Desenvolvo sites profissionais personalizados que se concentram em resultados, 
+                            combinando um design sofisticado com responsividade para proporcionar a melhor experiência 
+                            possível aos seus clientes.!</p>
+                    </div><!--especialidade-box-->
+
+                    <div class="especialidades-box">
+                        <i class="bi bi-phone"></i>
+                            <h3>App Mobile</h3>
+                            <p>Desenvolvo aplicativos móveis de alta qualidade que atendem às necessidades dos 
+                            usuários e proporcionam uma experiência excepcional. Seja para Android ou iOS, meu 
+                            foco é criar soluções eficientes e funcionais que se destaquem no mercado!</p>
+                    </div><!--especialidade-box-->
+
+                    <div class="especialidades-box">
+                        <i class="bi bi-threads-fill"></i>
+                            <h3>Blog</h3>
+                            <p>Desenvolvo blogs personalizados que atendem às necessidades individuais. 
+                                Seja para fins pessoais ou profissionais, meu objetivo é criar uma 
+                                plataforma envolvente e funcional que reflita a identidade e os objetivos 
+                                do cliente.</p>
+                    </div><!--especialidade-box-->
+
+                </div><!--fim do flex-->
+            </div><!--fim da interface-->
+        </section> <!--fim da esopecialidade-->
+
+        <section class="sobre">
+            <di class="interface">
+                <div class="flex">
+
+                    <div class="img-sobre">
+
+                        <img src="imagens/Logo marca Marcelo.png" alt=""> <!--foto minha-->
+
+                    </div><!-- fim img sobre-->
+
+                    <div class="txt-sobre">
+                        <h2> MUITO PRAZER, <span>SOU MARCELO FAQUIM.</span></h2>
+                        <p>
+                            “Sou um desenvolvedor front-end apaixonado por criar websites e aplicativos móveis. 
+                            Minha experiência inclui React.js, React Native, TypeScript, JavaScript, Node,js HTML e CSS. 
+                            Além disso, tenho trabalhado em projetos pessoais utilizando metodologias ágeis, como Kanban. 
+                            Sou formado em Técnico em Informática e Engenheiro de Software, e atualmente estou me aprimorando 
+                            ainda mais na área de Desenvolvimento Mobile. </p>
+
+                                <div class="btn-redes">
+                                   <a href="https://www.instagram.com/ocarinhadodev/"><button><i class="bi bi-instagram"></i></button></a>
+                                    <a href="https://www.linkedin.com/in/marcelo-faquim/"><button><i class="bi bi-linkedin"></i></button></a>
+                                    <a href="https://github.com/marcelofaquim"><button><i class="bi bi-github"></i></button></a>
+                                    <a href=" https://wa.me/11989044827"></a><button><i class="bi bi-whatsapp"></i></button></a>
+                                </div>
+                    </div><!--fim txt sobre-->
+
+                   
+
+                </div><!--fim flex-->
+            </di><!--fim interface-->
+        </section><!--fim sobre-->
+
+        <section class="portifolio">
+            <div class="interface">
+
+                <h2 class="titulo"> MEU <span>PORTIFÓLIO.</span></h2>
+
+                <div class="flex">
+                    <!--procurar imagem de projetos-->
+                    <!--Obs pode ser uma imagem de 1920 e altura -->
+
+                    <div class="img-portifolio" style="background-image: url(imagens/projeto1.png);">
+                        <div class="overlay"> Controle de Estoque </div>
+                    </div> 
+
+                    <div class="img-portifolio" style="background-image: url(imagens/projeto_32.png);">
+                        <div class="overlay"> E-Commerce </div>
+                    </div>
+
+                    <div class="img-portifolio" style="background-image: url(imagens/projeto3.png);">
+                        <div class="overlay"> WebSite </div>
+                    </div>
+                
+            </div><!--fim do flex-->    
+            </div><!--fim da div interface-->
+        </section> <!--fechamento portifolio-->
+
+        <section class="formulario">
+            <div class="interface">
+                <h2 class="titulo">
+                    FALA <span>COMIGO.</span>
+                </h2>
+
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Seu nome completo:" required>
+                    <input type="text" name="" id="" placeholder="Seu email" required>
+                    <input type="text" name="" id="" placeholder="Seu celular: ">
+                    <textarea name="" id="" placeholder="Sua Mensagem:" required></textarea>
+                    
+                    <div class="btn-enviar">
+                        <input type="submit" value="Enviar">
+                    </div>
+
+                </form>
+
+            </div><!--interface-->
+        </section> <!--Formulario-->
+
+    </main>
+
+    <footer>
+        <div class="interface">
+            <div class="line-footer">
+                <div class="flex">
+                <div class="logo-footer">
+                    <img src="imagens/Logo marca Marcelo.png" alt="">
+                </div>
+
+                    <div class="btn-redes">
+                        <a href="https://www.instagram.com/ocarinhadodev/"><button><i class="bi bi-instagram"></i></button></a>
+                         <a href="https://www.linkedin.com/in/marcelo-faquim/"><button><i class="bi bi-linkedin"></i></button></a>
+                         <a href="https://github.com/marcelofaquim"><button><i class="bi bi-github"></i></button></a>
+                         <a href=" https://wa.me/11989044827"></a><button><i class="bi bi-whatsapp"></i></button></a>
+
+                     </div> <!--Btn social-->
+                    </div><!--flex-->
+                </div><!--line-footer-->
+
+           
+
+            <div class="line-footer borda">
+                <p><i class="bi bi-envelope"></i>
+                    <a href="mailto:marcelofaquim0@gmail.com">marcelofaquim0@gmail.com</a>
+                </p>
+            </div><!--final footer-->
+        </div><!--final interface-->
+    </footer>
+
+</body>
+</html>
