@@ -36,6 +36,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Raleway", sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -397,15 +398,26 @@ form .btn-enviar{
     text-align: center;
 }
 
-form .btn-enviar input{
-    width: 120px;
+form .btn-enviar button{
+    padding: 10px 40px;
     background-color: aqua;
     color: black;
     cursor: pointer;
-    font-weight: 400;
+    font-size: 18px;
+    padding: 2%;
+    font-weight: 600;
     transition: .3s;
+    width: 260px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
     
 }
+
+
+
+    
+   
 
 /* Estilo do rodapé */
 
@@ -481,7 +493,7 @@ footer .line-footer p a{
     
 }
 
-    /* SObre */
+    /* Sobre */
 
     section.sobre {
         padding: 80px 8%;
@@ -543,15 +555,15 @@ footer .line-footer p a{
 
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Especialidade</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#especialidades">Especialidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
                 </ul>
             </nav>
 
             <div class="btn-contato">
-                <a href="#">
+                <a href="https://wa.me/11989044827">
                     <button>Contato</button>
                 </a>
             </div>
@@ -568,11 +580,11 @@ footer .line-footer p a{
 
                 <nav>
                     <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Especialidade</a></li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Projetos</a></li>
-                        <li><a href="#">Contato</li>
+                        <li><a href="inicio">Inicio</a></li>
+                        <li><a href="#especialidades">Especialidades</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#contato">Contato</li>
                     </ul>
                 </nav>
 
@@ -587,7 +599,7 @@ footer .line-footer p a{
 
     <main>
 
-        <section class="topo-do-site">
+        <section id="inicio" class="topo-do-site">
             <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-site">
@@ -597,15 +609,16 @@ footer .line-footer p a{
                         </p>
 
                             <div class="btn-contato">
-                                <a href="#">
+                                <a href="https://wa.me/11989044827">
                                     <button>Entre em contato</button>
                                 </a>
+                            
                             </div>
 
                     </div><!--txt topo site-->
                     <div class="img-topo-site">
 
-                        <img src="imagens/Logo Tipo Marcelo Faquim (1).png" alt=""> <!--minha foto profissional-->
+                        <img src="imagens/Design sem nome (1).png" alt=""> <!--minha foto profissional-->
 
                     </div><!--img topo site-->
                 </div><!--flex-->
@@ -614,7 +627,7 @@ footer .line-footer p a{
 
         </section> <!--final topo do site-->
 
-        <section class="especialidades">
+        <section id="especialidades" class="especialidades">
             <div class="interface">
                     <h2 class="titulo">MINHAS <span>ESPECIALIDADES.</span></h2>
                 <div class="flex">
@@ -648,7 +661,7 @@ footer .line-footer p a{
             </div><!--fim da interface-->
         </section> <!--fim da esopecialidade-->
 
-        <section class="sobre">
+        <section id="sobre" class="sobre">
             <di class="interface">
                 <div class="flex">
 
@@ -662,10 +675,12 @@ footer .line-footer p a{
                         <h2> MUITO PRAZER, <span>SOU MARCELO FAQUIM.</span></h2>
                         <p>
                             “Sou um desenvolvedor front-end apaixonado por criar websites e aplicativos móveis. 
-                            Minha experiência inclui React.js, React Native, TypeScript, JavaScript, Node,js HTML e CSS. 
+                            Tenho experiência nas seguintes linguagens: React.js, React Native, TypeScript, JavaScript, Node,js HTML e CSS.
+                            E nos seguintes frameworks: Bootstrap e Seven.
+                            <br> 
                             Além disso, tenho trabalhado em projetos pessoais utilizando metodologias ágeis, como Kanban. 
-                            Sou formado em Técnico em Informática e Engenheiro de Software, e atualmente estou me aprimorando 
-                            ainda mais na área de Desenvolvimento Mobile. </p>
+                            Sou formado em Técnico em Informática e <span>sigo me aprimorando para me tornar um desenvolvedor
+                            fullstack.</span></p>
 
                                 <div class="btn-redes">
                                    <a href="https://www.instagram.com/ocarinhadodev/"><button><i class="bi bi-instagram"></i></button></a>
@@ -681,7 +696,7 @@ footer .line-footer p a{
             </di><!--fim interface-->
         </section><!--fim sobre-->
 
-        <section class="portifolio">
+        <section id="projetos" class="portifolio">
             <div class="interface">
 
                 <h2 class="titulo"> MEU <span>PORTIFÓLIO.</span></h2>
@@ -690,38 +705,51 @@ footer .line-footer p a{
                     <!--procurar imagem de projetos-->
                     <!--Obs pode ser uma imagem de 1920 e altura -->
 
-                    <div class="img-portifolio" style="background-image: url(imagens/projeto1.png);">
+                    <!-- <div class="img-portifolio" style="background-image: url(imagens/projeto1.png);">
                         <div class="overlay"> Controle de Estoque </div>
-                    </div> 
+                    </div>  -->
 
                     <div class="img-portifolio" style="background-image: url(imagens/projeto_32.png);">
                         <div class="overlay"> E-Commerce </div>
                     </div>
 
                     <div class="img-portifolio" style="background-image: url(imagens/projeto3.png);">
-                        <div class="overlay"> WebSite </div>
+                        <div class="overlay"> Barbearia </div>
                     </div>
+
+                    <div class="img-portifolio" style="background-image: url(imagens/Resort.png);">
+                        <div class="overlay"> Resort </div>
+                    </div>
+
+                    
                 
             </div><!--fim do flex-->    
             </div><!--fim da div interface-->
         </section> <!--fechamento portifolio-->
 
-        <section class="formulario">
+        <section id="contato" class="formulario">
             <div class="interface">
                 <h2 class="titulo">
                     FALA <span>COMIGO.</span>
                 </h2>
 
-                <form action="">
-                    <input type="text" name="" id="" placeholder="Seu nome completo:" required>
-                    <input type="text" name="" id="" placeholder="Seu email" required>
-                    <input type="text" name="" id="" placeholder="Seu celular: ">
-                    <textarea name="" id="" placeholder="Sua Mensagem:" required></textarea>
+                <form action="https://formsubmit.co/faquimdosanjosmarcelo@gmail.com" method="POST">
+
+                    <input type="text" name="name" id="" placeholder="Seu nome completo:" required>
+                    <input type="text" name="email" id="" placeholder="Seu email" required>
+                    <input type="text" name="number" id="" placeholder="Seu celular: ">
+                    <textarea name="text" id="" placeholder="Sua Mensagem:" required></textarea>
+
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://marcelofaquim.github.io/obrigado.html">
                     
                     <div class="btn-enviar">
-                        <input type="submit" value="Enviar">
-                    </div>
+                        
+                    <button type="submit">
+                            Enviar
+                    </button>
 
+                </div>
                 </form>
 
             </div><!--interface-->
@@ -751,7 +779,9 @@ footer .line-footer p a{
 
             <div class="line-footer borda">
                 <p><i class="bi bi-envelope"></i>
-                    <a href="mailto:marcelofaquim0@gmail.com">marcelofaquim0@gmail.com</a>
+                    <a href="mailto:faquimdosanjosmarcelo@gmail.com">faquimdosanjosmarcelo@gmail.com
+                        
+                    </a>
                 </p>
             </div><!--final footer-->
         </div><!--final interface-->
